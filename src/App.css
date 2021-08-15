@@ -18,10 +18,11 @@ body {
 }
 
 h1 {
-  color: aliceblue;
+  color: whitesmoke;
   margin: 0;
   position: absolute;
-  top: 50%;
+  text-transform: uppercase;
+  top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;

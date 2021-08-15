@@ -5,6 +5,7 @@ import { shaderMaterial } from "@react-three/drei";
 import glsl from "babel-plugin-glsl/macro";
 
 // import ForestImage from "./images/forest.jpg";
+import IndianFlag from "./images/Indian-flag.jpg";
 import "./App.css";
 
 const WaveShaderMaterial = shaderMaterial(
@@ -60,14 +61,14 @@ const Wave = () => {
   const ref = useRef();
   useFrame(({ clock }) => (ref.current.uTime = clock.getElapsedTime()));
 
-  // const [image] = useLoader(THREE.TextureLoader, [ForestImage]);
-  const [image] = useLoader(THREE.TextureLoader, [
-    "https://images.unsplash.com/photo-1604011092346-0b4346ed714e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80",
-  ]);
+  const [image] = useLoader(THREE.TextureLoader, [IndianFlag]);
+  // const [image] = useLoader(THREE.TextureLoader, [
+  //   "https://images.unsplash.com/photo-1604011092346-0b4346ed714e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80",
+  // ]);
 
   return (
     <mesh>
-      <planeBufferGeometry args={[0.4, 0.6, 16, 16]} />
+      <planeBufferGeometry args={[0.6, 0.4, 16, 16]} />
       <waveShaderMaterial uColor={"hotpink"} ref={ref} uTexture={image} />
     </mesh>
   );
@@ -86,7 +87,7 @@ const Scene = () => {
 const App = () => {
   return (
     <>
-      <h1>POMADA MODELADORA</h1>
+      <h1>happy independence day</h1>
       <Scene />
     </>
   );
