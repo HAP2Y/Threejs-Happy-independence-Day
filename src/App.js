@@ -68,7 +68,7 @@ const Wave = () => {
 
   return (
     <mesh>
-      <planeBufferGeometry args={[0.6, 0.4, 16, 16]} />
+      <planeBufferGeometry args={[0.6, 0.4, 32, 16]} />
       <waveShaderMaterial uColor={"hotpink"} ref={ref} uTexture={image} />
     </mesh>
   );
@@ -87,7 +87,13 @@ const Scene = () => {
 const App = () => {
   return (
     <>
-      <h1>happy independence day</h1>
+      <h1>
+        <span id="orange">happy</span>{" "}
+        <span id="white">
+          <span id="blue">ind</span>ependence
+        </span>{" "}
+        <span id="green">day</span>
+      </h1>
       <Scene />
     </>
   );
